@@ -1,0 +1,4 @@
+
+.grid-container {
+    @apply lg:px-4 lg:mx-2;
+}
