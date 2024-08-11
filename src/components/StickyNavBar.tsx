@@ -32,6 +32,7 @@ const StickyNavbar = () =>  {
         variant="paragraph"
         color="blue-gray"
         className="p-1 font-normal"
+        onClick={() => setOpenNav(!openNav)}
       >
         <a href="#about" className="flex items-center">
           About
@@ -42,6 +43,7 @@ const StickyNavbar = () =>  {
         variant="paragraph"
         color="blue-gray"
         className="p-1 font-normal"
+        onClick={() => setOpenNav(!openNav)}
       >
         <a href="#order" className="flex items-center">
           Order
@@ -51,14 +53,15 @@ const StickyNavbar = () =>  {
   );
  
   return (
-    <div className={`w-full transition-all duration-300 ${openNav ? 'pt-[199px]' : 'pt-[50px] md:pt-[55px] lg:pt-[75px]'}`}>
-      <Navbar blurred={true} className="fixed top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+    // Need to set nav to have max width
+    <div className="max-h-[768px] w-full flex flex-col items-center fixed top-0 z-50">
+      <Navbar className="h-max max-w-[1440px] rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
-            href="#home"
-            variant='h5'
-            className="mr-4 cursor-pointer py-1.5 underline"
+            href="/"
+            variant='h4'
+            className="mr-4 cursor-pointer py-1.5 underline font-rokkitt"
           >
             The Brunette Baker
           </Typography>
