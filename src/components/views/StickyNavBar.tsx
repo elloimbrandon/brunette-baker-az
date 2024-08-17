@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import Hamburger from './svgs/Hamburger';
-import Close from './svgs/Close';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import Hamburger from '../svgs/Hamburger';
+import Close from '../svgs/Close';
+import { Link } from 'react-scroll';
 
 import {
   Navbar,
@@ -36,18 +36,15 @@ const StickyNavbar = () =>  {
         color="blue-gray"
         className="p-1 font-normal"
       >
-       <Link 
-        activeClass="active" 
-        to="about" 
-        spy={true} 
-        smooth={true} 
-        offset={61} 
-        duration={200}
-        className="flex items-center"
+        <Link 
+          activeClass="active" 
+          to="gallery" 
+          smooth={true} 
+          offset={-100} 
+          duration={200}
+          className="flex items-center cursor-pointer"
         >
-        {/* <a href="#about" className="flex items-center"> */}
-          About
-        {/* </a> */}
+          Gallery
         </Link>
       </Typography>
       <Typography
@@ -56,9 +53,33 @@ const StickyNavbar = () =>  {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#order" className="flex items-center">
+       <Link 
+          activeClass="active" 
+          to="about" 
+          smooth={true} 
+          offset={0} 
+          duration={200}
+          className="flex items-center cursor-pointer"
+        >
+          About
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="paragraph"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link 
+          activeClass="active" 
+          to="order"
+          smooth={true} 
+          offset={-60} 
+          duration={200}
+          className="flex items-center cursor-pointer"
+        >
           Order
-        </a>
+        </Link>
       </Typography>
     </ul>
   );
@@ -106,21 +127,17 @@ const StickyNavbar = () =>  {
               variant="paragraph"
               color="blue-gray"
               className="p-1 font-normal"
-              // onClick={() => setOpenNav(!openNav)}
             >
-            <Link 
-              activeClass="active" 
-              to="about" 
-              spy={true} 
-              smooth={true} 
-              offset={-61} 
-              duration={200}
-              className="flex items-center"
-              onClick={() => setOpenNav(!openNav)}
-              >
-              {/* <a href="#about" className="flex items-center"> */}
-                About
-              {/* </a> */}
+              <Link 
+                activeClass="active" 
+                to="gallery"
+                smooth={true} 
+                offset={-100} 
+                duration={200}
+                className="flex items-center"
+                onClick={() => setOpenNav(!openNav)}
+                >
+                  Gallery
               </Link>
             </Typography>
             <Typography
@@ -128,11 +145,36 @@ const StickyNavbar = () =>  {
               variant="paragraph"
               color="blue-gray"
               className="p-1 font-normal"
-              onClick={() => setOpenNav(!openNav)}
             >
-              <a href="#order" className="flex items-center">
-                Order
-              </a>
+              <Link 
+                activeClass="active" 
+                to="about"
+                smooth={true} 
+                offset={-100} 
+                duration={200}
+                className="flex items-center"
+                onClick={() => setOpenNav(!openNav)}
+                >
+                  About
+              </Link>
+            </Typography>
+            <Typography
+              as="li"
+              variant="paragraph"
+              color="blue-gray"
+              className="p-1 font-normal"
+            >
+              <Link 
+                activeClass="active" 
+                to="order"
+                smooth={true} 
+                offset={-100} 
+                duration={200}
+                className="flex items-center"
+                onClick={() => setOpenNav(!openNav)}
+                >
+                  Order
+              </Link>
             </Typography>
           </ul>
           <div className="flex items-center gap-x-1">

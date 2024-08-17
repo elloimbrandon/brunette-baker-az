@@ -1,7 +1,11 @@
 .section {
-    @apply mt-[60px] md:mt-[90px];
+    @apply mt-[60px] md:mt-[80px];
+}
+
+.section__large {
+    @apply md:mt-[140px];
 }
 
 .grid-container {
-    @apply px-4;
+    @apply px-4 md:px-6;
 }
