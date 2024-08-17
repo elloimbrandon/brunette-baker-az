@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import Hamburger from './svgs/Hamburger';
+import Close from './svgs/Close';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
 import {
   Navbar,
   MobileNav,
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import Hamburger from './svgs/Hamburger';
-import Close from './svgs/Close';
 
 const StickyNavbar = () =>  {
   const [openNav, setOpenNav] = useState(false);
@@ -25,6 +27,7 @@ const StickyNavbar = () =>  {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
  
+  // !! Handle scroll to
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -32,18 +35,26 @@ const StickyNavbar = () =>  {
         variant="paragraph"
         color="blue-gray"
         className="p-1 font-normal"
-        onClick={() => setOpenNav(!openNav)}
       >
-        <a href="#about" className="flex items-center">
+       <Link 
+        activeClass="active" 
+        to="about" 
+        spy={true} 
+        smooth={true} 
+        offset={61} 
+        duration={200}
+        className="flex items-center"
+        >
+        {/* <a href="#about" className="flex items-center"> */}
           About
-        </a>
+        {/* </a> */}
+        </Link>
       </Typography>
       <Typography
         as="li"
         variant="paragraph"
         color="blue-gray"
         className="p-1 font-normal"
-        onClick={() => setOpenNav(!openNav)}
       >
         <a href="#order" className="flex items-center">
           Order
@@ -53,9 +64,8 @@ const StickyNavbar = () =>  {
   );
  
   return (
-    // Need to set nav to have max width
-    <div className="max-h-[768px] w-full flex flex-col items-center fixed top-0 z-50">
-      <Navbar className="h-max max-w-[1440px] rounded-none px-4 py-2 lg:px-8 lg:py-4">
+    <div className="max-h-[768px] w-full flex flex-col items-center fixed top-0 z-50 backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 shadow-md bg-white">
+      <Navbar color="transparent" className="h-max max-w-[1440px] rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
@@ -90,7 +100,41 @@ const StickyNavbar = () =>  {
           </div>
         </div>
         <MobileNav open={openNav}>
-          {navList}
+        <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+            <Typography
+              as="li"
+              variant="paragraph"
+              color="blue-gray"
+              className="p-1 font-normal"
+              // onClick={() => setOpenNav(!openNav)}
+            >
+            <Link 
+              activeClass="active" 
+              to="about" 
+              spy={true} 
+              smooth={true} 
+              offset={-61} 
+              duration={200}
+              className="flex items-center"
+              onClick={() => setOpenNav(!openNav)}
+              >
+              {/* <a href="#about" className="flex items-center"> */}
+                About
+              {/* </a> */}
+              </Link>
+            </Typography>
+            <Typography
+              as="li"
+              variant="paragraph"
+              color="blue-gray"
+              className="p-1 font-normal"
+              onClick={() => setOpenNav(!openNav)}
+            >
+              <a href="#order" className="flex items-center">
+                Order
+              </a>
+            </Typography>
+          </ul>
           <div className="flex items-center gap-x-1">
             <IconButton fullWidth color="black" ripple={true}>
                   <FontAwesomeIcon icon={faInstagram} size="xl" color="white" />
