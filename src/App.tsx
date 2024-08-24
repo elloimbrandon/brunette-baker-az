@@ -3,20 +3,19 @@ import Hero from './components/views/Hero';
 import About from './components/views/About';
 import BreadCarousel from './components/views/BreadCarousel';
 import Order from './components/views/Order';
+import { BreadOptions } from './assets/config/Config';
 
 import './assets/css/Global.css'
 
-// Need to work on scroll
+// TODO:
+// - Work on scroll
+// - Footer
+// - Link Web3 Form
+// - Style order and form area
+// - Possibly set up contentful CMS
+// - Set up 404/routing
 
 function App() {
-
-  const breadOptions = [
-    { id: 1, name: 'Traditional Sourdough', description: 'Idk a description for bread', price: 12 },
-    { id: 2, name: 'Pizza Sourdough', description: 'Idk a description for bread', price: 16 },
-    { id: 3, name: 'Cinnamon Raisin Sourdough', description: 'Idk a description for bread', price: 16 },
-    { id: 4, name: 'Rosemary Seasalt Sourdough', description: 'Idk a description for bread', price: 14 },
-  ]
-
   return (
     <>
       <StickyNavbar/>
@@ -34,7 +33,7 @@ function App() {
         image="/images/woman-baker.jpg"
         imageAlt="Woman looking over counter containing bread loaves"
       />
-      <Order items={breadOptions}/>
+      <Order items={BreadOptions}/>
     </>
   )
 }

@@ -26,7 +26,7 @@ export default function Order({ items }: OrderProps) {
                             </li>
                         ))}
                     </ul>
-                    <div className="py-20">
+                    <div className="pb-20 pt-10">
                         <Form />
                     </div>
                 </div>
