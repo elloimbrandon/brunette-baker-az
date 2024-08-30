@@ -1,34 +1,13 @@
 import { Carousel } from "@material-tailwind/react";
+import { BreadPictures } from "../../assets/config/Config";
 
 interface PictureProps {
     image: string;
     imageAlt: string;
 }
 
-const pictures: PictureProps[] = [
-    {
-        image: "/images/bread-1.jpg",
-        imageAlt: "Two Loaves of homemade sourdough bread",
-    },
-    {
-        image: "/images/bread-2.jpg",
-        imageAlt: "Two Loaves of homemade sourdough bread",
-    },
-    {
-        image: "/images/bread-3.jpg",
-        imageAlt: "Two Loaves of homemade sourdough bread",
-    },
-    {
-        image: "/images/bread-4.jpg",
-        imageAlt: "Two Loaves of homemade sourdough bread",
-    },
-    {
-        image: "/images/bread-5.jpg",
-        imageAlt: "Two Loaves of homemade sourdough bread",
-    },
-];
+const pictures: PictureProps[] = BreadPictures;
 
- 
 export default function BreadCarousel() {
     return (
         <>

@@ -1,3 +1,4 @@
+import { Typography } from "@material-tailwind/react";
 import Form from "../forms/Form";
 
 interface Item {
@@ -14,19 +15,34 @@ interface OrderProps {
 export default function Order({ items }: OrderProps) {
     return (
         <>
-            <section className="section section__large">
-                <div className="grid-container flex flex-col items-center">
-                    <h1 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 font-rokkitt">Order</h1>
-                    <ul className="mb-20">
-                        {items.map(item => (
-                            <li key={item.id}>
-                                {item.name}:
-                                {item.description}
-                                <span className="text-red-300">${item.price}</span>
-                            </li>
-                        ))}
-                    </ul>
-                    <div className="pb-20 pt-10">
+            {/* Temp margin bottom */}
+            <section className="section section__large mb-[60px]">
+                <h1 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 font-rokkitt text-center">Order</h1>
+                <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-6">
+                    <div className="grid-container flex flex-col items-center">
+                        <ul className="mb-10 lg:mb-0 space-y-6 max-w-[440px]">
+                            {items.map(item => (
+                                <li key={item.id} className="flex flex-col">
+                                    <span>
+                                        <Typography variant="h3" color="blue-gray" className="font-rokkitt">
+                                            {item.name}
+                                        </Typography>
+                                    </span>    
+                                    <span>
+                                        <Typography variant="paragraph" color="blue-gray" className="text-sm font-medium mb-4">
+                                            {item.description}
+                                        </Typography>
+                                    </span>
+                                    <span>
+                                        <Typography variant="h4" color="blue-gray" className="font-medium font-rokkitt">
+                                            ${item.price}
+                                        </Typography>
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="grid-container flex flex-col items-center">
                         <Form />
                     </div>
                 </div>

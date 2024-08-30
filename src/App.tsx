@@ -9,6 +9,7 @@ import './assets/css/Global.css'
 
 // TODO:
 // - Work on scroll
+// - Replace svg arrows to something more fitting
 // - Footer
 // - Link Web3 Form
 // - Style order and form area

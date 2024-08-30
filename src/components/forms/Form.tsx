@@ -10,15 +10,15 @@ export default function Form() {
     return (
         <Card color="transparent" shadow={false} className="rounded-lg shadow-lg p-8 mx-2">
             <Typography variant="h4" color="blue-gray">
-            Order here
+                Order here
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
-            As soon as I recieve your order give me 2-3 days to fufill.<br/> I'll reach out to you regarding pickup/delivery.
+                As soon as I recieve your order give me 2-3 days to fufill.<br/> I'll reach out to you regarding pickup/delivery.
             </Typography>
             <form className="mt-8 mb-2 w-full">
                 <div className="mb-1 flex flex-col gap-6">
                     <Typography variant="h6" color="blue-gray" className="-mb-3">
-                    Your Name
+                        Your Name
                     </Typography>
                     <Input
                         size="lg"
@@ -51,12 +51,12 @@ export default function Form() {
                         color="gray"
                         placeholder="Send me an email with your order items here!"
                         name="message"
-                        className="focus:border-t-gray-900"
+                        className="!border-t-blue-gray-200 focus:!border-t-gray-900"
                         containerProps={{
-                            className: "!min-w-full",
+                            className: "!min-w-full before:content-none after:content-none",
                         }}
                         labelProps={{
-                            className: "hidden",
+                            className: "before:content-none after:content-none",
                         }}
                     />
                 </div>
