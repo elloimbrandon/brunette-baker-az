@@ -1,41 +1,36 @@
-.arrows {
-  @apply w-[60px] h-[72px] absolute left-[50%] ml-[-30px] bottom-[50px];
+.down-arrow {
+  position: absolute;
+  color: white;
+  top: calc(100vh - 120px);
+  left: calc(50%);
+  width: 0;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 2px;
+  animation: jumpInfinite 1.5s infinite;
 }
 
-.arrows path {
-  @apply stroke-white fill-transparent;
-  stroke-width: 1px;  
-  animation: arrow 2s infinite;
-  -webkit-animation: arrow 2s infinite; 
+.down-arrow:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
 }
 
-@keyframes arrow
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-@-webkit-keyframes arrow
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-.arrows path.a1 {
-  animation-delay:-1s;
-  -webkit-animation-delay:-1s;
-}
-
-.arrows path.a2 {
-  animation-delay: -0.5s;
-  -webkit-animation-delay: -0.5s;
-}
-
-.arrows path.a3 { 
-  animation-delay: 0s;
-  -webkit-animation-delay: 0s;
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
 }

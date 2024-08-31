@@ -8,12 +8,12 @@ import {
 
 export default function Form() {
     return (
-        <Card color="transparent" shadow={false} className="rounded-lg shadow-lg p-8 mx-2">
+        <Card color="transparent" shadow={false} className="rounded-lg shadow-lg p-8 md:mx-2">
             <Typography variant="h4" color="blue-gray">
                 Order here
             </Typography>
-            <Typography color="gray" className="mt-1 font-normal">
-                As soon as I recieve your order give me 2-3 days to fufill.<br/> I'll reach out to you regarding pickup/delivery.
+            <Typography color="gray" className="mt-1 font-normal max-w-[400px]">
+                As soon as I recieve your order give me 2-3 days to fufill. I'll reach out to you regarding pickup/delivery.
             </Typography>
             <form className="mt-8 mb-2 w-full">
                 <div className="mb-1 flex flex-col gap-6">

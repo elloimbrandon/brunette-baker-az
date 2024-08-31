@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import Hamburger from '../svgs/Hamburger';
 import Close from '../svgs/Close';
-import { Link } from 'react-scroll';
 
 import {
   Navbar,
@@ -57,7 +57,7 @@ const StickyNavbar = () =>  {
           activeClass="active" 
           to="about" 
           smooth={true} 
-          offset={0} 
+          offset={-100} 
           duration={200}
           className="flex items-center cursor-pointer"
         >
@@ -74,7 +74,7 @@ const StickyNavbar = () =>  {
           activeClass="active" 
           to="order"
           smooth={true} 
-          offset={-60} 
+          offset={-100} 
           duration={200}
           className="flex items-center cursor-pointer"
         >
@@ -85,7 +85,7 @@ const StickyNavbar = () =>  {
   );
  
   return (
-    <div className="max-h-[768px] w-full flex flex-col items-center fixed top-0 z-50 backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 shadow-md bg-white">
+    <div className="max-h-[768px] w-full flex flex-col items-center fixed top-0 z-[100] backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 shadow-md bg-white">
       <Navbar color="transparent" className="h-max max-w-[1440px] rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography

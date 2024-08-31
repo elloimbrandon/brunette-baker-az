@@ -3,18 +3,20 @@ import Hero from './components/views/Hero';
 import About from './components/views/About';
 import BreadCarousel from './components/views/BreadCarousel';
 import Order from './components/views/Order';
+import Footer from './components/views/Footer';
 import { BreadOptions } from './assets/config/Config';
 
 import './assets/css/Global.css'
 
 // TODO:
-// - Work on scroll
+// - Work on scroll (DONE)
 // - Replace svg arrows to something more fitting
-// - Footer
+// - Footer (DONE-ish)
 // - Link Web3 Form
 // - Style order and form area
 // - Possibly set up contentful CMS
 // - Set up 404/routing
+// - Fix carousel dots over nav (z index?) (DONE)
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
         imageAlt="Woman looking over counter containing bread loaves"
       />
       <Order items={BreadOptions}/>
+      <Footer title="The Brunette Baker AZ"/>
     </>
   )
 }

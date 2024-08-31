@@ -13,11 +13,7 @@ const AnimatedArrows = () => {
                 duration={200}
                 className="f-20 cursor-pointer w-full"
             >
-                <svg className="arrows">
-                    <path className="a1" d="M0 0 L30 32 L60 0"></path>
-                    <path className="a2" d="M0 20 L30 52 L60 20"></path>
-                    <path className="a3" d="M0 40 L30 72 L60 40"></path>
-                </svg>
+                <div className="down-arrow"></div>
             </Link>
         </>
     )

@@ -16,7 +16,8 @@ export default function Order({ items }: OrderProps) {
     return (
         <>
             {/* Temp margin bottom */}
-            <section className="section section__large mb-[60px]">
+            <section id="order" className="section section__large">
+            {/* <section id="order" className="section section__large mb-[60px]"> */}
                 <h1 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 font-rokkitt text-center">Order</h1>
                 <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-6">
                     <div className="grid-container flex flex-col items-center">
@@ -24,17 +25,17 @@ export default function Order({ items }: OrderProps) {
                             {items.map(item => (
                                 <li key={item.id} className="flex flex-col">
                                     <span>
-                                        <Typography variant="h3" color="blue-gray" className="font-rokkitt">
+                                        <Typography variant="h3" color="blue-gray" className="text-2xl md:text-4xl font-rokkitt">
                                             {item.name}
                                         </Typography>
-                                    </span>    
+                                    </span>
                                     <span>
-                                        <Typography variant="paragraph" color="blue-gray" className="text-sm font-medium mb-4">
+                                        <Typography variant="paragraph" color="blue-gray" className="text-sm font-medium mb-3">
                                             {item.description}
                                         </Typography>
                                     </span>
                                     <span>
-                                        <Typography variant="h4" color="blue-gray" className="font-medium font-rokkitt">
+                                        <Typography variant="h4" color="blue-gray" className="text-xl md:text-2xl font-medium font-rokkitt">
                                             ${item.price}
                                         </Typography>
                                     </span>
