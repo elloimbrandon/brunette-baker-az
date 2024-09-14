@@ -9,14 +9,11 @@ import { BreadOptions } from './assets/config/Config';
 import './assets/css/Global.css'
 
 // TODO:
-// - Work on scroll (DONE)
-// - Replace svg arrows to something more fitting
-// - Footer (DONE-ish)
 // - Link Web3 Form
 // - Style order and form area
 // - Possibly set up contentful CMS
 // - Set up 404/routing
-// - Fix carousel dots over nav (z index?) (DONE)
+// - fix arrow a tag to be wider
 
 function App() {
   return (
@@ -24,7 +21,8 @@ function App() {
       <StickyNavbar/>
       <Hero 
         title="The Brunette Baker"
-        copy="Crafting artisanal sourdough bread with love: elevating every loaf with time, care, and a dash of passion"
+        subheader="Crafting artisanal sourdough bread with love: elevating every loaf with time, care, and a dash of passion"
+        copy="Located in: Phoenix, AZ"
         image="/images/cutting-board-bread-hero.jpg"
         imageAlt="3 loaves of bread on a cutting board"
       />
