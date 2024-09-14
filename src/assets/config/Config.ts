@@ -27,3 +27,6 @@ export const BreadOptions = [
     { id: 3, name: 'Pizza Sourdough', description: 'Crispy sourdough crust topped with savory pepperoni, melted cheese, and fresh basil. A perfect blend of tangy, cheesy, and herby goodness in every bite.', price: 16 },
     { id: 4, name: 'Cinnamon Raisin Sourdough', description: 'A sweet and tangy sourdough with swirls of cinnamon and juicy raisins. Soft, aromatic, and perfect for toasting or enjoying fresh.', price: 16 },
 ]
+
+// export const SocialLinks = [
+// ]

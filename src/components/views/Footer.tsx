@@ -23,11 +23,15 @@ export default function About({ title }: FooterProps) {
                                 Rights Reserved.
                             </Typography>
                             <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
-                                <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
-                                    <FontAwesomeIcon icon={faInstagram} size="xl" color="black" />
+                                <Typography className="opacity-80 transition-opacity hover:opacity-100">
+                                    <a href="https://www.instagram.com/mrill/" rel="noopener" target="_blank" data-event-label="Instagram Logo">
+                                        <FontAwesomeIcon icon={faInstagram} size="xl" color="black" />
+                                    </a>
                                 </Typography>
-                                <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
-                                    <FontAwesomeIcon icon={faTiktok} size="xl" color="black" />
+                                <Typography className="opacity-80 transition-opacity hover:opacity-100">
+                                    <a href="https://www.tiktok.com/@mishelt32" rel="noopener" target="_blank" data-event-label="TikTok Logo">
+                                        <FontAwesomeIcon icon={faTiktok} size="xl" color="black" />
+                                    </a>
                                 </Typography>
                             </div>
                         </div>

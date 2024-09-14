@@ -10,9 +10,8 @@ import './assets/css/Global.css'
 
 // TODO:
 // - set up 404/routing
-// - fix arrow a tag to be wider
 // - add new bio picture
-// - add social links
+// - add bio copy
 
 function App() {
   return (

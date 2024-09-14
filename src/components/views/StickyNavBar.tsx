@@ -27,7 +27,6 @@ const StickyNavbar = () =>  {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
  
-  // !! Handle scroll to
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -35,17 +34,34 @@ const StickyNavbar = () =>  {
         variant="paragraph"
         color="blue-gray"
         className="p-1 font-normal"
-      >
-        <Link 
-          activeClass="active" 
-          to="gallery" 
-          smooth={true} 
-          offset={-100} 
-          duration={200}
-          className="flex items-center cursor-pointer"
         >
-          Gallery
-        </Link>
+          <Link
+            activeClass="active"
+            to="gallery"
+            smooth={true}
+            offset={-100}
+            duration={200}
+            className="flex items-center cursor-pointer"
+          >
+            Gallery
+          </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="paragraph"
+        color="blue-gray"
+        className="p-1 font-normal"
+        >
+          <Link
+            activeClass="active"
+            to="about"
+            smooth={true}
+            offset={-100}
+            duration={200}
+            className="flex items-center cursor-pointer"
+          >
+            About
+          </Link>
       </Typography>
       <Typography
         as="li"
@@ -53,28 +69,11 @@ const StickyNavbar = () =>  {
         color="blue-gray"
         className="p-1 font-normal"
       >
-       <Link 
-          activeClass="active" 
-          to="about" 
-          smooth={true} 
-          offset={-100} 
-          duration={200}
-          className="flex items-center cursor-pointer"
-        >
-          About
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="paragraph"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link 
-          activeClass="active" 
+        <Link
+          activeClass="active"
           to="order"
-          smooth={true} 
-          offset={-100} 
+          smooth={true}
+          offset={-100}
           duration={200}
           className="flex items-center cursor-pointer"
         >
@@ -100,10 +99,14 @@ const StickyNavbar = () =>  {
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-4">
               <IconButton color="black" ripple={true} className="text-lg hidden lg:inline-block">
-                <FontAwesomeIcon icon={faInstagram} size="xl" color="white" />
+                <a href="https://www.instagram.com/mrill/" rel="noopener" target="_blank" data-event-label="Instagram Logo">
+                  <FontAwesomeIcon icon={faInstagram} size="xl" color="white" />
+                </a>
               </IconButton>
               <IconButton color="black" ripple={true} className="text-lg hidden lg:inline-block">
-                <FontAwesomeIcon icon={faTiktok} size="xl" color="white" />
+                <a href="https://www.tiktok.com/@mishelt32" rel="noopener" target="_blank" data-event-label="TikTok Logo">
+                  <FontAwesomeIcon icon={faTiktok} size="xl" color="white" />
+                </a>
               </IconButton>
             </div>
             <IconButton
@@ -179,10 +182,14 @@ const StickyNavbar = () =>  {
           </ul>
           <div className="flex items-center gap-x-1">
             <IconButton fullWidth color="black" ripple={true}>
-                  <FontAwesomeIcon icon={faInstagram} size="xl" color="white" />
-                </IconButton>
-                <IconButton fullWidth color="black" ripple={true}>
-                  <FontAwesomeIcon icon={faTiktok} size="xl" color="white" />
+              <a href="https://www.instagram.com/mrill/" rel="noopener" target="_blank" data-event-label="Instagram Logo">
+                <FontAwesomeIcon icon={faInstagram} size="xl" color="white"/>
+              </a>
+            </IconButton>
+            <IconButton fullWidth color="black" ripple={true}>
+              <a href="https://www.tiktok.com/@mishelt32" rel="noopener" target="_blank" data-event-label="TikTok Logo">
+                <FontAwesomeIcon icon={faTiktok} size="xl" color="white"/>
+              </a>
             </IconButton>
           </div>
         </MobileNav>
