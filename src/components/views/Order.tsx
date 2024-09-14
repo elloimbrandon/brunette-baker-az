@@ -15,9 +15,7 @@ interface OrderProps {
 export default function Order({ items }: OrderProps) {
     return (
         <>
-            {/* Temp margin bottom */}
             <section id="order" className="section section__large">
-            {/* <section id="order" className="section section__large mb-[60px]"> */}
                 <h1 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 font-rokkitt text-center">Order</h1>
                 <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-6">
                     <div className="grid-container flex flex-col items-center">

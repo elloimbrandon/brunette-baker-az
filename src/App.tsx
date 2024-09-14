@@ -9,11 +9,10 @@ import { BreadOptions } from './assets/config/Config';
 import './assets/css/Global.css'
 
 // TODO:
-// - Link Web3 Form
-// - Style order and form area
-// - Possibly set up contentful CMS
-// - Set up 404/routing
+// - set up 404/routing
 // - fix arrow a tag to be wider
+// - add new bio picture
+// - add social links
 
 function App() {
   return (

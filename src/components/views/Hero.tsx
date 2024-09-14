@@ -1,5 +1,3 @@
-import AnimatedArrows from '../svgs/AnimatedArrows';
-
 interface HeroProps {
     title: string;
     subheader: string;
@@ -24,7 +22,6 @@ export default function Hero({ title, subheader, copy, image, imageAlt }: HeroPr
                     </div>
                     <hr className="border-2 w-1/2 md:w-1/3 rounded-full max-w-[462px]"/>
                 </div>
-                <AnimatedArrows/>
             </section>
         </>
     )
