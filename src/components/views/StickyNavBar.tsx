@@ -12,7 +12,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 
-const StickyNavbar = () =>  {
+export default function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
@@ -197,5 +197,3 @@ const StickyNavbar = () =>  {
     </div>
   );
 }
-
-export default StickyNavbar;
