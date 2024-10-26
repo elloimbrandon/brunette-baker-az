@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+// import { useNavigate } from 'react-router-dom';
 import Hamburger from '../svgs/Hamburger';
 import Close from '../svgs/Close';
 
+
+// Implement a turnary for navigate
 import {
   Navbar,
   MobileNav,
@@ -18,6 +21,7 @@ interface NavBarProps {
 
 
 export default function StickyNavbar({ notFound }: NavBarProps) {
+  // const navigate = useNavigate();
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
