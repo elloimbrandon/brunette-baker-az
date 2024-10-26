@@ -12,7 +12,12 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 
-export default function StickyNavbar() {
+interface NavBarProps {
+  notFound: boolean;
+}
+
+
+export default function StickyNavbar({ notFound }: NavBarProps) {
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
@@ -35,7 +40,7 @@ export default function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
         >
-          <Link
+          {!notFound ? <Link
             activeClass="active"
             to="gallery"
             smooth={true}
@@ -44,7 +49,14 @@ export default function StickyNavbar() {
             className="flex items-center cursor-pointer"
           >
             Gallery
-          </Link>
+          </Link>:<Typography
+            as="a"
+            href="/"
+            variant='paragraph'
+            className="cursor-pointer font-medium"
+          >
+            Gallery
+          </Typography>}
       </Typography>
       <Typography
         as="li"
@@ -52,7 +64,7 @@ export default function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
         >
-          <Link
+          {!notFound ? <Link
             activeClass="active"
             to="about"
             smooth={true}
@@ -61,7 +73,14 @@ export default function StickyNavbar() {
             className="flex items-center cursor-pointer"
           >
             About
-          </Link>
+          </Link>:<Typography
+            as="a"
+            href="/"
+            variant='paragraph'
+            className="cursor-pointer font-medium"
+          >
+            About
+          </Typography>}
       </Typography>
       <Typography
         as="li"
@@ -69,7 +88,7 @@ export default function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <Link
+        {!notFound ? <Link
           activeClass="active"
           to="order"
           smooth={true}
@@ -78,7 +97,14 @@ export default function StickyNavbar() {
           className="flex items-center cursor-pointer"
         >
           Order
-        </Link>
+        </Link>:<Typography
+            as="a"
+            href="/"
+            variant='paragraph'
+            className="cursor-pointer font-medium"
+          >
+            Order
+          </Typography>}
       </Typography>
     </ul>
   );
@@ -131,7 +157,7 @@ export default function StickyNavbar() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link 
+              {!notFound ? <Link 
                 activeClass="active" 
                 to="gallery"
                 smooth={true} 
@@ -139,9 +165,16 @@ export default function StickyNavbar() {
                 duration={200}
                 className="flex items-center"
                 onClick={() => setOpenNav(!openNav)}
-                >
-                  Gallery
-              </Link>
+              >
+                Gallery
+              </Link>:<Typography
+                as="a"
+                href="/"
+                variant='paragraph'
+                className="cursor-pointer font-medium"
+              >
+                Gallery
+              </Typography>}
             </Typography>
             <Typography
               as="li"
@@ -149,7 +182,7 @@ export default function StickyNavbar() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link 
+              {!notFound ? <Link 
                 activeClass="active" 
                 to="about"
                 smooth={true} 
@@ -159,7 +192,14 @@ export default function StickyNavbar() {
                 onClick={() => setOpenNav(!openNav)}
                 >
                   About
-              </Link>
+              </Link>:<Typography
+                  as="a"
+                  href="/"
+                  variant='paragraph'
+                  className="cursor-pointer font-medium"
+                >
+                  About
+              </Typography>}
             </Typography>
             <Typography
               as="li"
@@ -167,7 +207,7 @@ export default function StickyNavbar() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link 
+              {!notFound ? <Link 
                 activeClass="active" 
                 to="order"
                 smooth={true} 
@@ -177,7 +217,14 @@ export default function StickyNavbar() {
                 onClick={() => setOpenNav(!openNav)}
                 >
                   Order
-              </Link>
+              </Link>:<Typography
+                  as="a"
+                  href="/"
+                  variant='paragraph'
+                  className="cursor-pointer font-medium"
+                >
+                  Order
+              </Typography>}
             </Typography>
           </ul>
           <div className="flex items-center gap-x-1">

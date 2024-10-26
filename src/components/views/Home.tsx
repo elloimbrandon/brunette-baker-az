@@ -11,13 +11,14 @@ import '../../assets/css/Global.css'
 export default function Home() {
   return (
     <>
-      <StickyNavbar/>
-      <Hero 
+      <StickyNavbar notFound={false}/>
+      <Hero
         title="The Brunette Baker"
         subheader="Crafting artisanal sourdough bread with love: elevating every loaf with time, care, and a dash of passion"
         copy="Located in: Phoenix, AZ"
         image="/images/cutting-board-bread-hero.jpg"
         imageAlt="3 loaves of bread on a cutting board"
+        notFound={false}
       />
       <BreadCarousel/>
       <About 
@@ -28,7 +29,7 @@ export default function Home() {
         imageAlt="Woman looking over counter containing bread loaves"
       />
       <Order items={BreadOptions}/>
-      <Footer title="The Brunette Baker AZ"/>
+      <Footer notFound={false} title="The Brunette Baker AZ"/>
     </>
   )
 }

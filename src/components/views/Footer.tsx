@@ -3,15 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 interface FooterProps {
+    notFound: boolean;
     title: string;
 }
 
 const currentYear = new Date().getFullYear();
 
-export default function About({ title }: FooterProps) {
+export default function About({ title, notFound }: FooterProps) {
     return (
         <>
-            <section className="section section__large">
+            <section className={!notFound ? "section section__large" : "section mt-0"}>
                 <footer className="relative w-full">
                     <div className="mx-auto w-full px-8 max-w-[1440px]">
                         <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
