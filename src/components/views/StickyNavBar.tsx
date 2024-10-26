@@ -116,7 +116,7 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
             onClick={() => navigate("/")}
             className="text-2xl font-medium mr-4 cursor-pointer py-1.5 underline font-rokkitt"
             >
-              <h4>The Brunette Baker</h4>
+              The Brunette Baker
           </Link>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>

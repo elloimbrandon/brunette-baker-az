@@ -1,6 +1,8 @@
 import { Typography } from "@material-tailwind/react";
+import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 interface FooterProps {
     notFound: boolean;
@@ -10,6 +12,8 @@ interface FooterProps {
 const currentYear = new Date().getFullYear();
 
 export default function About({ title, notFound }: FooterProps) {
+    const navigate = useNavigate();
+
     return (
         <>
             <section className={!notFound ? "section section__large" : "section mt-0"}>
@@ -20,8 +24,13 @@ export default function About({ title, notFound }: FooterProps) {
                                 variant="paragraph"
                                 className="mb-4 text-center font-medium text-blue-gray-900 md:mb-0 font-rokkitt"
                             >
-                                &copy; {currentYear} <a href="/">{title}</a>. All
-                                Rights Reserved.
+                                &copy; {currentYear}
+                                <Link to="home"
+                                    onClick={() => navigate("/")}
+                                    className="cursor-pointer"
+                                    >
+                                        &nbsp;{title}
+                                </Link>. All Rights Reserved.
                             </Typography>
                             <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
                                 <Typography className="opacity-80 transition-opacity hover:opacity-100">
