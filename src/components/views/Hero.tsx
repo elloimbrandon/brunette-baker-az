@@ -28,7 +28,7 @@ export default function Hero({ title, subheader, copy, image, imageAlt, notFound
                     </div>:
                     <>
                         <h1 className="text-4xl md:text-7xl font-bold mb-2 md:mb-4 font-rokkitt">{title}</h1>
-                        <Button className="w-3/4 md:mb-8 md:w-1/4 bg-white text-black" type="button" onClick={() => navigate("/")}>
+                        <Button className="w-3/4 mb-8 md:w-1/4 bg-white text-black" type="button" onClick={() => navigate("/")}>
                             Go home
                         </Button>
                     </>}

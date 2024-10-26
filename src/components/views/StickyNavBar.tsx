@@ -2,12 +2,9 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Hamburger from '../svgs/Hamburger';
 import Close from '../svgs/Close';
-
-
-// Implement a turnary for navigate
 import {
   Navbar,
   MobileNav,
@@ -21,7 +18,7 @@ interface NavBarProps {
 
 
 export default function StickyNavbar({ notFound }: NavBarProps) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
@@ -53,14 +50,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
             className="flex items-center cursor-pointer"
           >
             Gallery
-          </Link>:<Typography
-            as="a"
-            href="/"
-            variant='paragraph'
-            className="cursor-pointer font-medium"
+          </Link>:<Link
+            to="gallery"
+            onClick={() => navigate("/")}
+            className="flex items-center cursor-pointer"
           >
             Gallery
-          </Typography>}
+          </Link>}
       </Typography>
       <Typography
         as="li"
@@ -77,14 +73,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
             className="flex items-center cursor-pointer"
           >
             About
-          </Link>:<Typography
-            as="a"
-            href="/"
-            variant='paragraph'
-            className="cursor-pointer font-medium"
+          </Link>:<Link
+            to="about"
+            onClick={() => navigate("/")}
+            className="flex items-center cursor-pointer"
           >
             About
-          </Typography>}
+          </Link>}
       </Typography>
       <Typography
         as="li"
@@ -101,14 +96,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
           className="flex items-center cursor-pointer"
         >
           Order
-        </Link>:<Typography
-            as="a"
-            href="/"
-            variant='paragraph'
-            className="cursor-pointer font-medium"
+        </Link>:<Link
+            to="order"
+            onClick={() => navigate("/")}
+            className="flex items-center cursor-pointer"
           >
             Order
-          </Typography>}
+          </Link>}
       </Typography>
     </ul>
   );
@@ -117,14 +111,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
     <div className="max-h-[768px] w-full flex flex-col items-center fixed top-0 z-[100] backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 shadow-md bg-white">
       <Navbar color="transparent" className="h-max max-w-[1440px] rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="/"
-            variant='h4'
-            className="mr-4 cursor-pointer py-1.5 underline font-rokkitt"
-          >
-            The Brunette Baker
-          </Typography>
+          <Link
+            to="home"
+            onClick={() => navigate("/")}
+            className="text-2xl font-medium mr-4 cursor-pointer py-1.5 underline font-rokkitt"
+            >
+              <h4>The Brunette Baker</h4>
+          </Link>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-4">
@@ -171,14 +164,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
                 onClick={() => setOpenNav(!openNav)}
               >
                 Gallery
-              </Link>:<Typography
-                as="a"
-                href="/"
-                variant='paragraph'
-                className="cursor-pointer font-medium"
+              </Link>:<Link
+                to="gallery"
+                onClick={() => navigate("/")}
+                className="flex items-center cursor-pointer"
               >
                 Gallery
-              </Typography>}
+              </Link>}
             </Typography>
             <Typography
               as="li"
@@ -194,16 +186,15 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
                 duration={200}
                 className="flex items-center"
                 onClick={() => setOpenNav(!openNav)}
-                >
+              >
                   About
-              </Link>:<Typography
-                  as="a"
-                  href="/"
-                  variant='paragraph'
-                  className="cursor-pointer font-medium"
-                >
-                  About
-              </Typography>}
+              </Link>:<Link
+                to="about"
+                onClick={() => navigate("/")}
+                className="flex items-center cursor-pointer"
+              >
+                About
+              </Link>}
             </Typography>
             <Typography
               as="li"
@@ -219,16 +210,15 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
                 duration={200}
                 className="flex items-center"
                 onClick={() => setOpenNav(!openNav)}
-                >
+              >
                   Order
-              </Link>:<Typography
-                  as="a"
-                  href="/"
-                  variant='paragraph'
-                  className="cursor-pointer font-medium"
-                >
-                  Order
-              </Typography>}
+              </Link>:<Link
+                to="order"
+                onClick={() => navigate("/")}
+                className="flex items-center cursor-pointer"
+              >
+                Order
+              </Link>}
             </Typography>
           </ul>
           <div className="flex items-center gap-x-1">
