@@ -18,17 +18,11 @@ This project was built using the following technologies:
 - **Node.js**: For backend functionality.  
 
 ## Screenshots  
+<img width="1458" alt="Screenshot 2024-12-03 at 7 49 21 PM" src="https://github.com/user-attachments/assets/dc630a25-508b-4391-ba04-b01c80e00f90">
 
-### Homepage  
-![Homepage](./images/Screenshot-2024-12-03-at-7.49.21-PM.png)
+<img width="370" alt="Screenshot 2024-12-03 at 7 51 05 PM" src="https://github.com/user-attachments/assets/fa8c6d2f-dfba-4feb-9f49-ac0ca47ebe04">
 
-### Meet the Baker Section  
-![About](./images/Screenshot-2024-12-03-at-7.51.05-PM.png)  
-
-### Navigation Menu  
-![Menu](./images/Screenshot-2024-12-03-at-7.52.08-PM.png)  
-
-> **Note:** Replace `./images/` with the correct path to your images in your repository.  
+<img width="379" alt="Screenshot 2024-12-03 at 7 52 08 PM" src="https://github.com/user-attachments/assets/716c8cc6-b139-4ae4-b0ce-c456fdc74afc">
 
 ## Getting Started  
 
