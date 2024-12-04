@@ -24,19 +24,6 @@ This project was built using the following technologies:
 
 <img width="379" alt="Screenshot 2024-12-03 at 7 52 08 PM" src="https://github.com/user-attachments/assets/716c8cc6-b139-4ae4-b0ce-c456fdc74afc">
 
-## Getting Started  
-
-### Installation  
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/your-username/the-brunette-baker.git  
-   cd the-brunette-baker  
-   ```  
-2. Install dependencies:  
-   ```bash  
-   npm install  
-   ```  
-
 ### Development  
 Start the development server:  
 ```bash  
