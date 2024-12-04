@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# The Brunette Baker
 
-Currently, two official plugins are available:
+The Brunette Baker is a beautifully crafted web app dedicated to showcasing and selling artisanal homemade sourdough bread. Built with React and TypeScript, the app combines performance and elegance to provide a seamless user experience.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features  
+- **Gallery:** Showcase your artisanal bread with a beautiful slider.  
+- **About:** Share your story and connect with your customers.  
+- **Order:** A simple and efficient form to place orders.  
 
-## Expanding the ESLint configuration
+## Tech Stack  
+This project was built using the following technologies:  
+- **React**: For building the user interface.  
+- **TypeScript**: For type safety and better development experience.  
+- **Vite**: For lightning-fast development and build processes.  
+- **Tailwind CSS**: For a responsive and modern UI.  
+- **Material Tailwind Components**: To enhance the design with pre-built components.  
+- **Node.js**: For backend functionality.  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Screenshots  
 
-- Configure the top-level `parserOptions` property like this:
+### Homepage  
+![Homepage](./images/Screenshot-2024-12-03-at-7.49.21-PM.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Meet the Baker Section  
+![About](./images/Screenshot-2024-12-03-at-7.51.05-PM.png)  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Navigation Menu  
+![Menu](./images/Screenshot-2024-12-03-at-7.52.08-PM.png)  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+> **Note:** Replace `./images/` with the correct path to your images in your repository.  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Getting Started  
+
+### Installation  
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/the-brunette-baker.git  
+   cd the-brunette-baker  
+   ```  
+2. Install dependencies:  
+   ```bash  
+   npm install  
+   ```  
+
+### Development  
+Start the development server:  
+```bash  
+npm run dev  
+```  
+
+### Build  
+Build for production:  
+```bash  
+npm run build  
+```  
+
+## Deployment  
+The app is production-ready and can be deployed on platforms like Netlify, Vercel, or AWS.  
