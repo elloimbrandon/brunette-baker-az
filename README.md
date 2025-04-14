@@ -1,7 +1,10 @@
 
 # The Brunette Baker
 
-The Brunette Baker is a beautifully crafted web app dedicated to showcasing and selling artisanal homemade sourdough bread. Built with React and TypeScript, the app combines performance and elegance to provide a seamless user experience.  
+The Brunette Baker is a beautifully crafted web app dedicated to showcasing and selling artisanal homemade sourdough bread. Built with React and TypeScript, the app combines performance and elegance to provide a seamless user experience.
+
+## Live Web Page
+https://www.thebrunettebakeraz.com
 
 ## Features  
 - **Gallery:** Showcase your artisanal bread with a beautiful slider.  
