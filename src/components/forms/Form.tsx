@@ -55,7 +55,7 @@ export default function Form() {
                     Email me
                 </Typography>
                 <Typography color="gray" className="mt-1 font-normal max-w-[400px]">
-                    As soon as I receive your order, give me 2-3 days to fulfill. I'll reach out to you regarding pickup/delivery.
+                    Fulfillment time varies based on the size of your order. After I receive your order, I'll reach out to you regarding fulfillment and pickup/delivery.
                 </Typography>
                 <Typography color="gray" className="mt-1 font-normal max-w-[400px]">
                     (Phoenix, AZ only)
