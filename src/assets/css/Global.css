@@ -9,3 +9,7 @@
 .grid-container {
     @apply px-4 md:px-6;
 }
+
+a {
+    @apply cursor-pointer;
+}

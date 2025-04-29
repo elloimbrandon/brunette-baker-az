@@ -47,13 +47,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
             smooth={true}
             offset={-100}
             duration={200}
-            className="flex items-center !cursor-pointer"
+            className="flex items-center cursor-pointer"
           >
             Gallery
           </Link>:<Link
             to="gallery"
             onClick={() => navigate("/")}
-            className="flex items-center !cursor-pointer"
+            className="flex items-center cursor-pointer"
           >
             Gallery
           </Link>}
@@ -70,13 +70,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
             smooth={true}
             offset={-100}
             duration={200}
-            className="flex items-center !cursor-pointer"
+            className="flex items-center cursor-pointer"
           >
             About
           </Link>:<Link
             to="about"
             onClick={() => navigate("/")}
-            className="flex items-center !cursor-pointer"
+            className="flex items-center cursor-pointer"
           >
             About
           </Link>}
@@ -93,13 +93,13 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
           smooth={true}
           offset={-100}
           duration={200}
-          className="flex items-center !cursor-pointer"
+          className="flex items-center cursor-pointer"
         >
           Order
         </Link>:<Link
             to="order"
             onClick={() => navigate("/")}
-            className="flex items-center !cursor-pointer"
+            className="flex items-center cursor-pointer"
           >
             Order
           </Link>}
@@ -114,7 +114,7 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
           <Link
             to="home"
             onClick={() => navigate("/")}
-            className="text-2xl font-medium mr-4 !cursor-pointer py-1.5 underline font-rokkitt"
+            className="text-2xl font-medium mr-4 cursor-pointer py-1.5 underline font-rokkitt"
             >
               The Brunette Baker
           </Link>
@@ -167,7 +167,7 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
               </Link>:<Link
                 to="gallery"
                 onClick={() => navigate("/")}
-                className="flex items-center !cursor-pointer"
+                className="flex items-center cursor-pointer"
               >
                 Gallery
               </Link>}
@@ -191,7 +191,7 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
               </Link>:<Link
                 to="about"
                 onClick={() => navigate("/")}
-                className="flex items-center !cursor-pointer"
+                className="flex items-center cursor-pointer"
               >
                 About
               </Link>}
@@ -215,7 +215,7 @@ export default function StickyNavbar({ notFound }: NavBarProps) {
               </Link>:<Link
                 to="order"
                 onClick={() => navigate("/")}
-                className="flex items-center !cursor-pointer"
+                className="flex items-center cursor-pointer"
               >
                 Order
               </Link>}
